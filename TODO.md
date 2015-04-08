@@ -4,3 +4,5 @@ Versión 1.0
 [] Diseño de la inerfaz en gkt3
 [] Implemenar la Interfaz
 [] Instalar y probar gobby (yum install gobby05)
+[] Revisar viabilidad de uso de libinfinity
+
