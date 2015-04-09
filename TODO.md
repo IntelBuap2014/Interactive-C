@@ -3,7 +3,7 @@ Versión 1.0
 * [] Establecer conexión entre dos PCs, mediante sockets (Emmanuel y Roberto)  
 * [] Implementar la Interfaz principal de chat  (Omar)
 * [*] Implementar interfaz de creación de sesión (Celina)
-* [] Implementar interfaz de unirse a una sesión activa
+* [] Implementar interfaz de unirse a una sesión activa (Edilberto)
 * [] Conectar código de comunicación con interfaz
 * [] Documentación
 * [] Makefile
