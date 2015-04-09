@@ -5,7 +5,7 @@
 * [*] Implementar interfaz de creación de sesión (Celina)
 * [*] Implementar interfaz de unirse a una sesión activa (Celina)
 * [] Conectar código de comunicación con interfaz (Edilberto)
-* [] Documentación
+* [] Generar Documentación
 * [] Makefile
 
 ** **Actividades para TODOS** **
@@ -13,3 +13,6 @@
 * [] Revisar viabilidad de uso de libinfinity (https://github.com/gobby/libinfinity)
 * [] Revisar viabilidad de uso de libinfgtk para interfaz
 * [] Revisar imagen1 para obtener ideas sobre interfaz
+* [] Internacionjalizacion de su codigo
+* [] Comentar el codigo individualmente
+* [] Proponer un estandar de documentacion
