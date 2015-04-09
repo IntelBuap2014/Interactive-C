@@ -1,7 +1,7 @@
 <interface>
   <object id="window" class="GtkWindow">
     <property name="visible">True</property>
-    <property name="title">Crear Sesión</property>
+    <property name="title">Unirse a Sesión</property>
     <property name="border-width">40</property>
     <child>
       <object id="grid" class="GtkGrid">
