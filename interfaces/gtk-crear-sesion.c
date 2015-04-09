@@ -23,7 +23,7 @@ main (int   argc,
 
   /* Construct a GtkBuilder instance and load our UI description */
   builder = gtk_builder_new ();
-  gtk_builder_add_from_file (builder, "builder.ui", NULL);
+  gtk_builder_add_from_file (builder, "builder-crear-sesion.ui", NULL);
 
   /* Connect signal handlers to the constructed widgets. */
   window = gtk_builder_get_object (builder, "window");
