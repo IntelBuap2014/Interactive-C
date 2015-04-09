@@ -1,3 +1,5 @@
+//Compilación: gcc `pkg-config --cflags gtk+-3.0` -o gtk-crear-sesion gtk-crear-sesion.c `pkg-config --libs gtk+-3.0`
+
 #include <gtk/gtk.h>
 
 static void
