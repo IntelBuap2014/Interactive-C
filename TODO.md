@@ -9,5 +9,6 @@ Versión 1.0
 
 * Actividades para TODOS
 * [] Instalar y probar gobby (yum install gobby)
-* [] Revisar viabilidad de uso de libinfinity
+* [] Revisar viabilidad de uso de libinfinity (https://github.com/gobby/libinfinity)
+* [] Revisar viabilidad de uso de libinfgtk para interfaz
 * [] Revisar imagen1 para obtener ideas sobre interfaz
