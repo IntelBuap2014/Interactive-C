@@ -37,7 +37,7 @@ main(int argc, char *argv)
     //creacion del socket de tipo TCP(SOCK_STREAM), y protocolo IPv4(AF_INET)
     ds = socket(AF_INET, SOCK_STREAM, 0); 
     
-    if(s != -1)
+    if(ds != -1)
     {
       //actualizacion de la estructura del servidor 
       server_struct.sin_family = AF_INET;
