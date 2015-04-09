@@ -1,4 +1,4 @@
-Versión 1.0
+#Versión 1.0
 
 * [] Establecer conexión entre dos PCs, mediante sockets (Emmanuel y Roberto, Edilberto)  
 * [] Implementar la Interfaz principal de chat  (Omar)
@@ -8,7 +8,7 @@ Versión 1.0
 * [] Documentación
 * [] Makefile
 
-* Actividades para TODOS
+** **Actividades para TODOS** **
 * [] Instalar y probar gobby (yum install gobby)
 * [] Revisar viabilidad de uso de libinfinity (https://github.com/gobby/libinfinity)
 * [] Revisar viabilidad de uso de libinfgtk para interfaz
