@@ -1,6 +1,6 @@
 /*
- *	Proyecto colabarativo 
- *	Parte del cliente
+ *	Proyecto colabarativo: Interactive-C
+ *	Cliente
  *
  */
 
