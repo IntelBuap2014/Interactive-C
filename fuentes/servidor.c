@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <netinet/in.h>
-#include <socket.h>
+#include <sys/socket.h>
 
 #define MAX_CONN 10 //numero maximo de conexiones
 
