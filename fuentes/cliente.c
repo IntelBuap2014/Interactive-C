@@ -25,7 +25,7 @@ int main(int argc, char *argv){
 	
 	server_struct.sin_family = AF_INET;
 	server_struct.sin_port = htons(atoi(arv[1]));
-	server_struct.sin_addr.s_addr = htonl()INADDR_ANY;
+	server_struct.sin_addr.s_addr = htonl(INADDR_ANY);
 
 /*
  *	Estableciendo la conección al servidor.
