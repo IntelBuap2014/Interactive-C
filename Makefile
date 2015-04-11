@@ -3,7 +3,7 @@ CFLAGS = `pkg-config --libs gtk+-3.0`
 LDFLAGS = `pkg-config --cflags gtk+-3.0`
 FUESERVIDOR = fuentes/server.c
 FUECLIENTE = fuentes/N_client.c
-OBJCONEXION = $(HOME)/repositorios/Interactive-C/fuentes/*.o
+OBJCONEXION = fuentes/*.o
 SOURCES = interfaces/gtk-unir-sesion.c
 OBJECTS = /interfaces*.o
 
