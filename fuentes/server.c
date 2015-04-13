@@ -8,10 +8,13 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <time.h>
+#include <locale.h>
+#include <libintl.h>
 	
 #define PORT 4950
 #define BUFSIZE 1024
 #define MAX_CONN 10
+#define _(cadena) gettext(cadena)
 
 typedef struct conexiones
 {
@@ -28,7 +31,7 @@ void send_to_all(int j, int i, int sockfd, int nbytes_recvd, char *recv_buf, fd_
 	if (FD_ISSET(j, master)){
 		if (j != sockfd && j != i) {			
 			if (send(j, client, nbytes_recvd+18, 0) == -1) {
-				perror("send");
+				perror(_("Enviar"));
 			}
 		}
 	}
@@ -41,9 +44,9 @@ void send_recv(int i, fd_set *master, int sockfd, int fdmax, char *client)
 	
 	if ((nbytes_recvd = recv(i, recv_buf, BUFSIZE, 0)) <= 0) {
 		if (nbytes_recvd == 0) {
-			printf("sockte %d desconectado\n", i);
+			printf(_("Socket %d desconectado\n", i));
 		}else {
-			perror("recv");
+			perror(_("Recibir"));
 		}
 		close(i);
 		FD_CLR(i, master);
@@ -61,14 +64,14 @@ int connection_accept(fd_set *master, int *fdmax, int sockfd, struct sockaddr_in
 	
 	addrlen = sizeof(struct sockaddr_in);
 	if((newsockfd = accept(sockfd, (struct sockaddr *)client_addr, &addrlen)) == -1) {
-		perror("accept");
+		perror(_("Aceptar"));
 		exit(1);
 	}else {
 		FD_SET(newsockfd, master);
 		if(newsockfd > *fdmax){
 			*fdmax = newsockfd;
 		}
-		printf("new connection from %s on port %d \n",inet_ntoa(client_addr->sin_addr), ntohs(client_addr->sin_port));
+		printf(_("Nueva conexión de %s en el puerto %d \n",inet_ntoa(client_addr->sin_addr), ntohs(client_addr->sin_port)));
 		return newsockfd;
 	}	
 }
@@ -78,7 +81,7 @@ void connect_request(int *sockfd, struct sockaddr_in *my_addr, int puerto)
 	int yes = 1;
 		
 	if ((*sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
-		perror("Socket");
+		perror(_("Socket"));
 		exit(1);
 	}
 		
@@ -88,20 +91,20 @@ void connect_request(int *sockfd, struct sockaddr_in *my_addr, int puerto)
 	memset(my_addr->sin_zero, '\0', sizeof my_addr->sin_zero);
 		
 	if (setsockopt(*sockfd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int)) == -1) {
-		perror("setsockopt");
+		perror(_("setsockopt"));
 		exit(1);
 	}
 		
 	if (bind(*sockfd, (struct sockaddr *)my_addr, sizeof(struct sockaddr)) == -1) {
-		perror("Unable to bind");
+		perror(_("Unable to bind"));
 		exit(1);
 	}
 	if (listen(*sockfd, 10) == -1) {
-		perror("listen");
+		perror(_("Escuchar"));
 		exit(1);
 	}
-	printf("\nTCPServer Waiting for client on port %d\n",puerto);
-	fflush(stdout);
+	printf(_("\nServidor TCP esperando a cliente en puerto %d\n",puerto));
+	fflush(_(stdout));
 }
 int main(int argc, char *argv[])
 {
@@ -113,6 +116,14 @@ int main(int argc, char *argv[])
 	int sockfd=0;
 	char *cad = malloc(BUFSIZE);
 	struct sockaddr_in my_addr, client_addr;
+
+ 	bind_textdomain_codeset ("server", "UTF-8");
+        setlocale(LC_ALL, "");
+        bindtextdomain("server", "idioma");
+        textdomain("server");
+
+
+
 
 	if(argc==2)
 	{
@@ -130,7 +141,7 @@ int main(int argc, char *argv[])
 		while(1){
 			read_fds = master;
 			if(select(fdmax+1, &read_fds, NULL, NULL, NULL) == -1){
-				perror("select");
+				perror(_("Seleccionar"));
 				exit(4);
 			}
 		
@@ -164,7 +175,7 @@ int main(int argc, char *argv[])
 	}
 	else	
 	{
-		printf("Número de argumentos invalido\n");
+		printf(_("Número de argumentos invalido\n"));
 		return -1;
 	}
 }

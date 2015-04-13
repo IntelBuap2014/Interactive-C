@@ -2,6 +2,14 @@
 
 
 #include <gtk/gtk.h>
+#include <libintl.h>
+#include <locale.h>
+<<<<<<< HEAD
+=======
+
+#define _(cadena) gettext(cadena)
+
+>>>>>>> 56b2b6b7b09f4ec0093e61146fc0dcdf8ae9d12b
 
 static void
 print_hello (GtkWidget *widget,
@@ -20,7 +28,17 @@ main (int   argc,
   GObject *entry;
   GObject *label;
 
+  bind_textdomain_codeset ("gtk-interfaces", "UTF-8");
+  setlocale(LC_ALL, "");
+  bindtextdomain("gtk-interfaces", "idioma");
+  textdomain("gtk-interfaces");
+
   gtk_init (&argc, &argv);
+
+  bind_textdomain_codeset("Interactive-C", "UTF-8");
+  setlocale(LC_ALL, "");
+  bindtextdomain("Interactive-C","idioma");
+  textdomain("Interactive-C");
 
   /* Construct a GtkBuilder instance and load our UI description */
   builder = gtk_builder_new ();
