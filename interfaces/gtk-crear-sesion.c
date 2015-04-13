@@ -1,7 +1,7 @@
 //Compilación: gcc `pkg-config --cflags gtk+-3.0` -o gtk-crear-sesion gtk-crear-sesion.c `pkg-config --libs gtk+-3.0`
 
 #include <gtk/gtk.h>
-#include <linintl.h>
+#include <libintl.h>
 #include <locale.h>
 
 #define _(cadena) gettext(cadena)
@@ -25,9 +25,10 @@ main (int   argc,
 
   gtk_init (&argc, &argv);
 
-  bind_text_domain_codeset("Interactive-C", "UTF-8");
-  setlocate(LC_ALL, "");
+  bind_textdomain_codeset("Interactive-C", "UTF-8");
+  setlocale(LC_ALL, "");
   bindtextdomain("Interactive-C","idioma");
+  textdomain("Interactive-C");
 
   /* Construct a GtkBuilder instance and load our UI description */
   builder = gtk_builder_new ();
