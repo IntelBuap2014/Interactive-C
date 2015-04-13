@@ -2,6 +2,8 @@
 
 
 #include <gtk/gtk.h>
+#include <libintl.h>
+#include <locale.h>
 
 static void
 print_hello (GtkWidget *widget,
@@ -19,6 +21,11 @@ main (int   argc,
   GObject *button;
   GObject *entry;
   GObject *label;
+
+  bind_textdomain_codeset ("gtk-interfaces", "UTF-8");
+  setlocale(LC_ALL, "");
+  bindtextdomain("gtk-interfaces", "idioma");
+  textdomain("gtk-interfaces");
 
   gtk_init (&argc, &argv);
 

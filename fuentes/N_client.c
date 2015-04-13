@@ -34,7 +34,7 @@ void send_recv(int i, int sockfd)
 void connect_request(int *sockfd, struct sockaddr_in *server_addr, char *puerto, char *direccion)
 {
 	if ((*sockfd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
-		perror("Socket");
+		perror(_("Socket"));
 		exit(1);
 	}
 	server_addr->sin_family = AF_INET;
@@ -43,7 +43,7 @@ void connect_request(int *sockfd, struct sockaddr_in *server_addr, char *puerto,
 	memset(server_addr->sin_zero, '\0', sizeof server_addr->sin_zero);
 	
 	if(connect(*sockfd, (struct sockaddr *)server_addr, sizeof(struct sockaddr)) == -1) {
-		perror("connect");
+		perror(_("Conectar"));
 		exit(1);
 	}
 }
@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 		while(1){
 			read_fds = master;
 			if(select(fdmax+1, &read_fds, NULL, NULL, NULL) == -1){
-				perror("select");
+				perror(_("Seleccionar"));
 				exit(4);
 			}
 		
@@ -75,12 +75,12 @@ int main(int argc, char *argv[])
 				if(FD_ISSET(i, &read_fds))
 					send_recv(i, sockfd);
 		}
-		printf("client-quited\n");
+		printf(_("Cliente eliminado\n"));
 		close(sockfd);
 		return 0;
 	}
 	else
 	{
-		printf("Número de parametros incorrecto\n");
+		printf(_("Número de parámetros incorrecto\n"));
 	}
 }

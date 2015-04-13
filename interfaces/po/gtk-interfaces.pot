@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-04-13 16:41-0500\n"
+"POT-Creation-Date: 2015-04-13 17:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,6 +10,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:3
+#: builder-unir-sesion.ui:8
+#: builder-unir-sesion.ui:11
+#: builder-unir-sesion.ui:22
+#: builder-unir-sesion.ui:33
+#: builder-unir-sesion.ui:44
+#: builder-unir-sesion.ui:55
+#: builder-unir-sesion.ui:66
+#: builder-unir-sesion.ui:77
+#: builder-unir-sesion.ui:88
+#: builder-unir-sesion.ui:99
+#: builder-unir-sesion.ui:110
+#: builder-unir-sesion.ui:122
+#: builder-unir-sesion.ui:133
 #: builder-crear-sesion.ui:3
 #: builder-crear-sesion.ui:8
 #: builder-crear-sesion.ui:11
@@ -26,21 +40,30 @@ msgid "True"
 msgstr ""
 
 #. (itstool) path: object/property
-#: builder-crear-sesion.ui:4
-msgid "Crear Sesión"
+#: builder-unir-sesion.ui:4
+msgid "Unirse a Sesión"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:5
 #: builder-crear-sesion.ui:5
 msgid "40"
 msgstr ""
 
 #. (itstool) path: object/property
-#: builder-crear-sesion.ui:12
-msgid "Host"
+#: builder-unir-sesion.ui:12
+msgid "Aceptar"
 msgstr ""
 
 #. (itstool) path: packing/property
+#: builder-unir-sesion.ui:15
+#: builder-unir-sesion.ui:37
+#: builder-unir-sesion.ui:38
+#: builder-unir-sesion.ui:49
+#: builder-unir-sesion.ui:59
+#: builder-unir-sesion.ui:81
+#: builder-unir-sesion.ui:103
+#: builder-unir-sesion.ui:126
 #: builder-crear-sesion.ui:15
 #: builder-crear-sesion.ui:37
 #: builder-crear-sesion.ui:38
@@ -52,12 +75,28 @@ msgid "0"
 msgstr ""
 
 #. (itstool) path: packing/property
+#: builder-unir-sesion.ui:16
+#: builder-unir-sesion.ui:27
 #: builder-crear-sesion.ui:16
 #: builder-crear-sesion.ui:27
 msgid "5"
 msgstr ""
 
 #. (itstool) path: packing/property
+#: builder-unir-sesion.ui:17
+#: builder-unir-sesion.ui:26
+#: builder-unir-sesion.ui:39
+#: builder-unir-sesion.ui:48
+#: builder-unir-sesion.ui:60
+#: builder-unir-sesion.ui:61
+#: builder-unir-sesion.ui:70
+#: builder-unir-sesion.ui:71
+#: builder-unir-sesion.ui:83
+#: builder-unir-sesion.ui:92
+#: builder-unir-sesion.ui:105
+#: builder-unir-sesion.ui:115
+#: builder-unir-sesion.ui:128
+#: builder-unir-sesion.ui:137
 #: builder-crear-sesion.ui:17
 #: builder-crear-sesion.ui:26
 #: builder-crear-sesion.ui:39
@@ -74,11 +113,20 @@ msgid "1"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:23
 #: builder-crear-sesion.ui:23
 msgid "Cancelar"
 msgstr ""
 
 #. (itstool) path: packing/property
+#: builder-unir-sesion.ui:28
+#: builder-unir-sesion.ui:50
+#: builder-unir-sesion.ui:72
+#: builder-unir-sesion.ui:82
+#: builder-unir-sesion.ui:93
+#: builder-unir-sesion.ui:94
+#: builder-unir-sesion.ui:117
+#: builder-unir-sesion.ui:139
 #: builder-crear-sesion.ui:28
 #: builder-crear-sesion.ui:50
 #: builder-crear-sesion.ui:72
@@ -90,38 +138,67 @@ msgid "2"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:34
+msgid "Host:"
+msgstr ""
+
+#. (itstool) path: object/property
+#: builder-unir-sesion.ui:56
 #: builder-crear-sesion.ui:34
 msgid "Puerto:"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:78
 #: builder-crear-sesion.ui:56
 msgid "Nombre:"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:100
 #: builder-crear-sesion.ui:78
 msgid "Color:"
 msgstr ""
 
+#. (itstool) path: packing/property
+#: builder-unir-sesion.ui:104
+#: builder-unir-sesion.ui:116
+#: builder-crear-sesion.ui:105
+#: builder-crear-sesion.ui:116
+msgid "3"
+msgstr ""
+
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:111
 #: builder-crear-sesion.ui:89
 msgid "--------"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:112
 #: builder-crear-sesion.ui:90
 msgid "False"
 msgstr ""
 
 #. (itstool) path: object/property
+#: builder-unir-sesion.ui:123
 #: builder-crear-sesion.ui:101
 msgid "Contraseña:"
 msgstr ""
 
 #. (itstool) path: packing/property
-#: builder-crear-sesion.ui:105
-#: builder-crear-sesion.ui:116
-msgid "3"
+#: builder-unir-sesion.ui:127
+#: builder-unir-sesion.ui:138
+msgid "4"
+msgstr ""
+
+#. (itstool) path: object/property
+#: builder-crear-sesion.ui:4
+msgid "Crear Sesión"
+msgstr ""
+
+#. (itstool) path: object/property
+#: builder-crear-sesion.ui:12
+msgid "Host"
 msgstr ""
 
