@@ -1,15 +1,15 @@
-# Spanish translations for server package.
+# Spanish translations for fuentes package.
 # Copyright (C) 2015 Celina
-# This file is distributed under the same license as the server package.
-# Intel <chelinoska@gmail.com>, 2015.
+# This file is distributed under the same license as the fuentes package.
+# nino <edilberto.huerta0290@gmail.com>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: server 0.1\n"
+"Project-Id-Version: fuentes 0.1\n"
 "Report-Msgid-Bugs-To: chelinoska@gmail.com\n"
-"POT-Creation-Date: 2015-04-13 16:50-0500\n"
-"PO-Revision-Date: 2015-04-13 16:51-0500\n"
-"Last-Translator: Intel <chelinoska@gmail.com>\n"
+"POT-Creation-Date: 2015-04-14 10:42-0500\n"
+"PO-Revision-Date: 2015-04-14 10:45-0500\n"
+"Last-Translator: nino <edilberto.huerta0290@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -24,8 +24,22 @@ msgid ""
 "Servidor TCP esperando a cliente en puerto %d\n"
 msgstr ""
 
+#: N_client.c:31
+#, c-format
+msgid "%s\n"
+msgstr ""
+
 #: server.c:67
 msgid "Aceptar"
+msgstr ""
+
+#: N_client.c:87
+#, c-format
+msgid "Cliente eliminado\n"
+msgstr ""
+
+#: N_client.c:49
+msgid "Conectar"
 msgstr ""
 
 #: server.c:34
@@ -36,12 +50,16 @@ msgstr ""
 msgid "Escuchar"
 msgstr ""
 
+#: server.c:99
+msgid "No se puede enlazar"
+msgstr ""
+
 #: server.c:74
 #, c-format
 msgid "Nueva conexión de %s en el puerto %d \n"
 msgstr ""
 
-#: server.c:178
+#: server.c:176 N_client.c:93
 #, c-format
 msgid "Número de argumentos invalido\n"
 msgstr ""
@@ -50,21 +68,17 @@ msgstr ""
 msgid "Recibir"
 msgstr ""
 
-#: server.c:144
+#: server.c:142 N_client.c:79
 msgid "Seleccionar"
 msgstr ""
 
-#: server.c:84
+#: server.c:84 N_client.c:40
 msgid "Socket"
 msgstr ""
 
 #: server.c:47
 #, c-format
 msgid "Socket %d desconectado\n"
-msgstr ""
-
-#: server.c:99
-msgid "No se puede enlazar"
 msgstr ""
 
 #: server.c:94
