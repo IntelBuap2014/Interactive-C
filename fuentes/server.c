@@ -96,7 +96,7 @@ void connect_request(int *sockfd, struct sockaddr_in *my_addr, int puerto)
 	}
 		
 	if (bind(*sockfd, (struct sockaddr *)my_addr, sizeof(struct sockaddr)) == -1) {
-		perror(_("Unable to bind"));
+		perror(_("No se puede enlazar"));
 		exit(1);
 	}
 	if (listen(*sockfd, 10) == -1) {
