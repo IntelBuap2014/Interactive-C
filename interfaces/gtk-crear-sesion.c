@@ -3,11 +3,8 @@
 #include <gtk/gtk.h>
 #include <libintl.h>
 #include <locale.h>
-<<<<<<< HEAD
-=======
 
 #define _(cadena) gettext(cadena)
->>>>>>> 56b2b6b7b09f4ec0093e61146fc0dcdf8ae9d12b
 
 static void
 print_hello (GtkWidget *widget,
