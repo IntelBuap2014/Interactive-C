@@ -7,9 +7,12 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <errno.h>
+#include <libintl.h>
+#include <locale.h>
 	
 #define BUFSIZE 1024
-		
+#define _(cadena) gettext(cadena)		
+
 void send_recv(int i, int sockfd)
 {
 	char send_buf[BUFSIZE];
@@ -25,7 +28,7 @@ void send_recv(int i, int sockfd)
 	}else {
 		nbyte_recvd = recv(sockfd, recv_buf, BUFSIZE, 0);
 		recv_buf[nbyte_recvd] = '\0';
-		printf("%s\n" , recv_buf);
+		printf(_("%s\n"), recv_buf);
 		fflush(stdout);
 	}
 }
@@ -54,6 +57,12 @@ int main(int argc, char *argv[])
 	struct sockaddr_in server_addr;
 	fd_set master;
 	fd_set read_fds;
+
+ 	bind_textdomain_codeset ("N_client", "UTF-8");
+        setlocale(LC_ALL, "");
+        bindtextdomain("N_client", "idioma");
+        textdomain("N_client");
+
 
 	if(argc == 3)
 	{
