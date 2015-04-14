@@ -117,10 +117,10 @@ int main(int argc, char *argv[])
 	char *cad = malloc(BUFSIZE);
 	struct sockaddr_in my_addr, client_addr;
 
- 	bind_textdomain_codeset ("server", "UTF-8");
+ 	bind_textdomain_codeset ("fuentes", "UTF-8");
         setlocale(LC_ALL, "");
-        bindtextdomain("server", "idioma");
-        textdomain("server");
+        bindtextdomain("fuentes", "idioma");
+        textdomain("fuentes");
 
 
 	if(argc==2)
