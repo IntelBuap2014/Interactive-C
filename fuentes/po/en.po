@@ -24,37 +24,37 @@ msgid ""
 "Servidor TCP esperando a cliente en puerto %d\n"
 msgstr ""
 "\n"
-"Servidor TCP esperando a cliente en puerto %d\n"
+"TCP Server waiting client on port  %d\n"
 
 #: server.c:67
 msgid "Aceptar"
-msgstr "Aceptar"
+msgstr "Accept"
 
 #: server.c:34
 msgid "Enviar"
-msgstr "Enviar"
+msgstr "Send"
 
 #: server.c:103
 msgid "Escuchar"
-msgstr "Escuchar"
+msgstr "Listen"
 
 #: server.c:74
 #, c-format
 msgid "Nueva conexión de %s en el puerto %d \n"
-msgstr "Nueva conexión de %s en el puerto %d \n"
+msgstr "New connection from %s on port %d \n"
 
 #: server.c:178
 #, c-format
 msgid "Número de argumentos invalido\n"
-msgstr "Número de argumentos invalido\n"
+msgstr "Invalid number of arguments\n"
 
 #: server.c:49
 msgid "Recibir"
-msgstr "Recibir"
+msgstr "Receive"
 
 #: server.c:144
 msgid "Seleccionar"
-msgstr "Seleccionar"
+msgstr "Select"
 
 #: server.c:84
 msgid "Socket"
@@ -63,10 +63,10 @@ msgstr "Socket"
 #: server.c:47
 #, c-format
 msgid "Socket %d desconectado\n"
-msgstr "Socket %d desconectado\n"
+msgstr "Socket %d has been disconnected\n"
 
 #: server.c:99
-msgid "Unable to bind"
+msgid "No se puede enlazar"
 msgstr "Unable to bind"
 
 #: server.c:94

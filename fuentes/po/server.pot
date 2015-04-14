@@ -64,7 +64,7 @@ msgid "Socket %d desconectado\n"
 msgstr ""
 
 #: server.c:99
-msgid "Unable to bind"
+msgid "No se puede enlazar"
 msgstr ""
 
 #: server.c:94
