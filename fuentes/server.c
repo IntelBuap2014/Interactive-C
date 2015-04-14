@@ -44,7 +44,7 @@ void send_recv(int i, fd_set *master, int sockfd, int fdmax, char *client)
 	
 	if ((nbytes_recvd = recv(i, recv_buf, BUFSIZE, 0)) <= 0) {
 		if (nbytes_recvd == 0) {
-			printf(_("Socket %d desconectado\n", i));
+			printf(_("Socket %d desconectado\n"), i);
 		}else {
 			perror(_("Recibir"));
 		}
@@ -71,7 +71,7 @@ int connection_accept(fd_set *master, int *fdmax, int sockfd, struct sockaddr_in
 		if(newsockfd > *fdmax){
 			*fdmax = newsockfd;
 		}
-		printf(_("Nueva conexión de %s en el puerto %d \n",inet_ntoa(client_addr->sin_addr), ntohs(client_addr->sin_port)));
+		printf(_("Nueva conexión de %s en el puerto %d \n"), inet_ntoa(client_addr->sin_addr), ntohs(client_addr->sin_port));
 		return newsockfd;
 	}	
 }
@@ -103,8 +103,8 @@ void connect_request(int *sockfd, struct sockaddr_in *my_addr, int puerto)
 		perror(_("Escuchar"));
 		exit(1);
 	}
-	printf(_("\nServidor TCP esperando a cliente en puerto %d\n",puerto));
-	fflush(_(stdout));
+	printf(_("\nServidor TCP esperando a cliente en puerto %d\n"),puerto);
+	fflush(stdout);
 }
 int main(int argc, char *argv[])
 {
@@ -121,8 +121,6 @@ int main(int argc, char *argv[])
         setlocale(LC_ALL, "");
         bindtextdomain("server", "idioma");
         textdomain("server");
-
-
 
 
 	if(argc==2)
