@@ -58,10 +58,10 @@ int main(int argc, char *argv[])
 	fd_set master;
 	fd_set read_fds;
 
- 	bind_textdomain_codeset ("N_client", "UTF-8");
+ 	bind_textdomain_codeset ("fuentes", "UTF-8");
         setlocale(LC_ALL, "");
-        bindtextdomain("N_client", "idioma");
-        textdomain("N_client");
+        bindtextdomain("fuentes", "idioma");
+        textdomain("fuentes");
 
 
 	if(argc == 3)
@@ -90,6 +90,6 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf(_("Número de parámetros incorrecto\n"));
+		printf(_("Número de argumentos invalido\n"));
 	}
 }
