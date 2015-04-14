@@ -128,8 +128,6 @@
             <property name="width">2</property>
           </packing>
         </child>
-<<<<<<< HEAD
-=======
         <child>
           <placeholder/>
         </child>
@@ -139,7 +137,6 @@
         <child>
           <placeholder/>
         </child>
->>>>>>> 56b2b6b7b09f4ec0093e61146fc0dcdf8ae9d12b
       </object>
     </child>
   </object>
