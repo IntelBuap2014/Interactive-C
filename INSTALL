@@ -1,0 +1,7 @@
+interactive-c 
+name		minimum version			used version
+autoconf	2.69				2.69
+automake	1.14.1				1.14.1
+gtk		3.14.12				3.14.12
+gcc		2.95.2				4.9.2
+make		4.0				4.0
