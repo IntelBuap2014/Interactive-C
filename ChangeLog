@@ -1,0 +1,5 @@
+v1.0	-Interfaces y controlador agregado
+	-Interfaz principal terminada
+	-Interfaz crear sesión y unirse a sesión
+	-Conexión entre servidor y n clientes 
+	-Internacionalización de servidor y cliente
