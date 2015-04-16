@@ -1,22 +1,31 @@
 CC = gcc
 CFLAGS = `pkg-config --libs gtk+-3.0`
 LDFLAGS = `pkg-config --cflags gtk+-3.0`
-FUESERVIDOR = fuentes/server.c
-FUECLIENTE = fuentes/N_client.c
-OBJCONEXION = fuentes/*.o
-SOURCES = interfaces/gtk-unir-sesion.c
+FUESERVIDOR = src/controlador/server.c
+FUECLIENTE = src/controlador/N_client.c
+OBJCONEXION = src/controlador/*.o
+CREARSESION = src/interfaces/gtk-crear-sesion.c
+UNIRSESION = src/interfaces/gtk-unir-sesion.c
+PRINCIPAL = src/interfaces/gtk-principal.c
 OBJECTS = /interfaces*.o
 
-all: interfaz1 servidor cliente
+all: iprincipal usesion csesion servidor cliente
     
-interfaz1: ${SOURCES} 
-	${CC} ${LDFLAGS} -o bin/gtk-unir-sesion ${SOURCES} ${CFLAGS} 
+
+iprincipal: ${PRINCIPAL}
+	${CC} ${LDFLAGS} -o src/interfaces/gtk-principal ${PRINCIPAL} ${CFLAGS}
+
+usesion: ${UNIRSESION} 
+	${CC} ${LDFLAGS} -o src/interfaces/gtk-unir-sesion ${UNIRSESION} ${CFLAGS}
+
+csesion: ${CREARSESION}
+	${CC} ${LDFLAGS} -o src/interfaces/gtk-crear-sesion ${CREARSESION} ${CFLAGS} 
 
 servidor: ${FUESERVIDOR}
-	${CC} ${FUESERVIDOR} -o bin/server
+	${CC} ${FUESERVIDOR} -o src/controlador/server
 
 cliente: ${FUECLIENTE}
-	${CC} ${FUECLIENTE} -o bin/cliente
+	${CC} ${FUECLIENTE} -o src/controlador/cliente
 
 
 
